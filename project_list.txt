@@ -1,0 +1,3 @@
+INDEX,NAME,LOCATION
+1,Local Weather App,~/freeCodeCamp/local-weather-app/,local-weather-app.sh
+2,Py Scripts,~/Py_Scripts/,pyscripting.sh
