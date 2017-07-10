@@ -27,7 +27,7 @@ def get_project_id(d):
         if answer > no_of_Projects or answer < 1:
             print("Project number does not exist, try again.")
             return get_project_id(d)
-        return d[answer][2]
+        return d[answer][1]
 
     except ValueError:
         print("Please choose a number only")
@@ -42,8 +42,7 @@ def print_projects(d):
     print(" " * 15 + "CHOOSE YOUR PROJECT")
     print("=" * 50 + "\n")
     for proj_id in d.keys():
-        print("{}   {}      {}".format(
-            str(proj_id), d[proj_id][0], d[proj_id][1]))
+        print("{}   {}".format(str(proj_id), d[proj_id][0]))
 
     return get_project_id(d)
 
@@ -54,13 +53,14 @@ def get_projects():
 
     with open(PROJECTS, 'r') as f:
         projects = f.readlines()
+        # remove header
         projects.pop(0)
         projects = [p.strip() for p in projects]
 
         d = {}
-        for p in projects:
-            l = p.split(',')
-            d[int(l[0])] = [l[1], l[2], l[3]]
+        for project in projects:
+            l = project.split(',')
+            d[int(l[0])] = [l[1], l[2]]
 
     return print_projects(d)
 
