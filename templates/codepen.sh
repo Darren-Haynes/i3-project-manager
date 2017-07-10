@@ -1,23 +1,29 @@
 #!/bin/bash
 
-cd ~/freeCodeCamp/local-weather-app
-i3-msg "workspace Dotfiles; append_layout /home/darren/i3-project-manager/templates/codepen.json"
+shopt -s globstar nullglob
 
-cp ~/.Xresources ~/.which_color/xresources_html
+dir=^PROJ_DIR^
+cd $dir
+
+i3-msg "workspace Project; append_layout ^TEMP_DIR^"
+
+
+python ~/Py_Scripts/xr_random_colors.py
 (urxvt -e vim **/*.html &)
 sleep 0.1
 
-python ~/Py_Scripts/xr_random_colors.py
-cp ~/.Xresources ~/.which_color/xresources_js
+
+python ~/Py_Scripts/xr_random_colors.py yes
 (urxvt -e vim **/*.js &)
 sleep 0.1
 
+
 python ~/Py_Scripts/xr_random_colors.py
-cp ~/.Xresources ~/.which_color/xresources_urxvt
 (urxvt &)
 sleep 0.1
 
-python ~/Py_Scripts/xr_random_colors.py
-cp ~/.Xresources ~/.which_color/xresources_css
+
+python ~/Py_Scripts/xr_random_colors.py yes
 (urxvt -e vim **/*.css &)
+sleep 0.1
 
