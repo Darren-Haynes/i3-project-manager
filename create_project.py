@@ -151,8 +151,31 @@ def create_project():
             exit(0)
 
 
+def initialize_git():
+    """ Check if user wants to initialize a github repo for this project. """
+
+    answer = input("Do you want to initialize this project in git?\n").lower()
+
+    if answer != "yes" and answer != "y" and answer != "no" and answer != "n":
+        print("Please choose 'yes' or 'no' only'\n")
+        initialize_git()
+    elif answer == 'yes':
+        return True
+    elif answer == 'y':
+        return True
+    else:
+        print("Git not initialized\n") 
+        exit(0)
+
+
+def create_github_repo():
+    if initialize_git():
+        print("Now create git function")
+
+
 def main():
     create_project()
+    create_github_repo()
 
 
 if __name__ == '__main__':
