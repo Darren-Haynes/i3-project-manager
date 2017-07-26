@@ -67,8 +67,9 @@ def get_projects():
 
 def main():
     """ Get the bash script that opens the project in i3wm workspace and
-        execute it""" 
+        execute it"""
     bash_script = get_projects()
+    print("PATH: {}".format(os.path.join(EXEC_DIR, bash_script)))
     subprocess.call(os.path.join(EXEC_DIR, bash_script))
 
 
