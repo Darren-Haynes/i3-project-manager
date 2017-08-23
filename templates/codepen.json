@@ -19,7 +19,7 @@
                     "percent": 0.5,
                     "swallows": [
                        {
-                       "class": "^URxvt$",
+                       "class": "^Gvim$",
                        "transient_for": "^$"
                        }
                     ],
@@ -32,7 +32,7 @@
                     "percent": 0.5,
                     "swallows": [
                        {
-                       "class": "^URxvt$",
+                       "class": "^Gvim$",
                        "transient_for": "^$"
                        }
                     ],
@@ -71,7 +71,7 @@
             "percent": 0.5,
             "swallows": [
                {
-               "class": "^URxvt$",
+               "class": "^Gvim$",
                "transient_for": "^$"
                }
             ],
