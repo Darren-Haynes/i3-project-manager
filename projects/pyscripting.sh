@@ -9,7 +9,7 @@ python ~/Py_Scripts/xr_random_colors.py
 sleep 0.1
 
 python ~/Py_Scripts/xr_random_colors.py
-(urxvt -e ipython &)
+(urxvt -e ipython3 &)
 sleep 0.01
 
 python ~/Py_Scripts/xr_random_colors.py
