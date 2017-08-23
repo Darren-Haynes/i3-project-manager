@@ -4,3 +4,4 @@ INDEX,DIRECTORY,SCRIPT
 3,~/freeCodeCamp/wikipedia-viewer,wikipedia-viewer.sh
 4,~/i3-project-manager,i3-project-manager.sh
 5,~/CodeFellows/Python-Test-CF,Python-Test-CF.sh
+6,~/freeCodeCamp/personal-portfolio,personal-portfolio.sh
